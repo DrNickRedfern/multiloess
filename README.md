@@ -1,6 +1,8 @@
 # multiloess
 **multiloess** is a streamlit app for fitting multiple loess smoothers to motion picture shot length data.
 
+You can find the plot here: [multiloess](https://share.streamlit.io/drnickredfern/multiloess/main).
+
 The app is easy to use:
 
 * Upload a csv file containing shot length data in wide format (i.e., one column per film). `NAs` are removed automatically.
