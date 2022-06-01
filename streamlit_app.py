@@ -87,7 +87,8 @@ if st.sidebar.button("Visualise"):
             lowess(film_data, times, is_sorted=True, frac=s, it=1)[:, 1])
         span = pd.Series(np.repeat(s, len(times)))
         dat_res = pd.DataFrame({"span": span, "times": times, "fit": fit})
-        dat_out = dat_out.append(dat_res, ignore_index=True)
+        dfs = [dat_out, dat_res]
+        dat_out = pd.concat(dfs, ignore_index=True)
 
     # Create the plot
     sns.set_theme(style="whitegrid")
